@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/edit.dart';
 
 void main() {
-  runApp(Firsthoge());
+  runApp(First());
 }
 
-class Firsthoge extends StatelessWidget {
+class First extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -52,13 +52,14 @@ class _FirstRouteState extends State<FirstRoute> {
                   );
                   //追加画面から受け取り確認
                   print(newListText);
-                  if (newListText != null) {
+                  if (newListText != null ) {
                     // キャンセルした場合は newListText が null となるので注意
                     setState(() {
                       // リスト追加
                       todoList.add(newListText);
                     });
                   }
+                  
                 },
                 child: Icon(Icons.add),
               ),
